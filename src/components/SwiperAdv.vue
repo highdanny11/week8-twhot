@@ -180,6 +180,7 @@ export default {
   border-radius: 50%;
   transition: all 0.5s;
   position: absolute;
+  z-index: 10;
   top: 50%;
 }
 .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
@@ -196,5 +197,6 @@ export default {
 }
 .swiper-button-next:after, .swiper-button-prev:after {
   font-size: 20px;
+  z-index: 10;
 }
 </style>
