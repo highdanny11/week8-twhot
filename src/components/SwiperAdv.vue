@@ -182,6 +182,9 @@ export default {
   position: absolute;
   z-index: 10;
   top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
   right: 10px;
