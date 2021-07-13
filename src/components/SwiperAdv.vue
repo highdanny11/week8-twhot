@@ -169,6 +169,9 @@ export default {
 .swiper-pagination {
   opacity: 0 ;
 }
+.swiper-wrapper {
+  position: relative;
+}
 .swiper-button-next, .swiper-button-prev {
   width: 50px;
   height: 50px;
@@ -178,6 +181,14 @@ export default {
   transition: all 0.5s;
   position: absolute;
   top: 50%;
+}
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+  right: 10px;
+  left: auto;
+}
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+  left: 10px;
+  right: auto;
 }
 .swiper-button-next:hover, .swiper-button-prev:hover {
   background-color:#fff;
