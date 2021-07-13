@@ -1,0 +1,50 @@
+.sort-item {
+  //商品分類選項
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: white;
+  -ms-writing-mode: tb-lr;
+  /* 直排 */
+  writing-mode: vertical-lr;
+  letter-spacing: 0.5rem;
+  border: 1px solid #fff;
+  background-color: rgba(223, 238, 245, 0.6);
+  transition: all 0.6s;
+  font-size: 1.25rem;
+  overflow: hidden;
+  font-weight: 700;
+  padding: 6rem 0; /* 利用padding擠出高度 */
+}
+.sort-item:hover {
+  color: white;
+  background-color: rgba(178, 105, 202, 0.2);
+}
+.sort-item:hover .sort-img {
+  filter: blur(0.1px);
+  transform: scale(1.2);
+}
+.sort-img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1; /* z-index: -1的關係，無法直接hover，因此外圍使用div的hover再加入特定屬性; */
+  filter: blur(3px);
+  background-size: cover;
+  background-position: center;
+  transition: filter 0.6s, transform 0.6s;
+}
+@media (max-width: 568px) {
+  .sort-img {
+    object-fit: fill;
+    height: auto;
+  }
+  .sort-item {
+    padding: 0.5rem 0;
+  }
+}

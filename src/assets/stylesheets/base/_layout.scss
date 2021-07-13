@@ -1,0 +1,160 @@
+// 處理navbar、footer樣式
+.count {
+  position: absolute;
+  bottom: 26px;
+  right: 3px;
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 10rem;
+}
+// 購物車動畫
+.shark {
+  animation: next 0.6s linear infinite alternate;
+}
+@keyframes next {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-10deg);
+  }
+}
+.logo {
+  object-fit: fill;
+  width: 200px;
+  height: 50px;
+}
+@media (max-width: 568px) {
+  .logo {
+    object-fit: fill;
+    width: 100px;
+    height: 50px;
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.navtop-item {
+  position: relative;
+  font-weight: 700;
+}
+.navtop-item::before {
+  transition: all 0.8s;
+  position: absolute;
+  right: 4%;
+  top: 5%;
+  width: 90%;
+  height: 90%;
+  opacity: 0;
+  content: " ";
+  z-index: -1;
+  
+}
+.navtop-item:hover::before {
+  opacity: 1;
+  background: #fff;
+  transform: translateX(0%) scale(1) rotate(-4deg);
+}
+.cartdropdown,.heartdropdown {
+  cursor: pointer;
+  display: block;
+}
+.cart-dropdown-menu {
+  position: absolute;
+  top: 110%;
+  z-index: 1000;
+  display: none;
+  padding: 0.5rem 0.5rem;
+  margin: 0.125rem 0 0;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  right: 0;
+  width: 300px;
+  border-color: #e9eaec;
+}
+.cart-dropdown-menu::before {
+  display: none;
+  background-color: #fff;
+  position: absolute;
+  content: "";
+  left: 92%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border-width: 10px;
+  border-style: solid;
+  z-index: 1001;
+  top: -20px;
+  border-color: transparent transparent rgba(0, 0, 0, 0.15) transparent;
+}
+.cartdropdown:active .cart-dropdown-menu,.cartdropdown:focus .cart-dropdown-menu {
+  display: block;
+  cursor: default;
+}
+.cartdropdown:active .cart-dropdown-menu::before,.cartdropdown:focus .cart-dropdown-menu::before {
+  cursor: default;
+  display: block;
+}
+.heart-dropdown-menu {
+  position: absolute;
+  top: 110%;
+  z-index: 1000;
+  display: none;
+  padding: 0.5rem 0.5rem;
+  margin: 0.125rem 0 0;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  right: -75%;
+  width: 300px;
+  border-color: #e9eaec;
+}
+.heart-dropdown-menu::before {
+  display: none;
+  background-color: #fff;
+  position: absolute;
+  content: "";
+  left: 77%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border-width: 10px;
+  border-style: solid;
+  z-index: 1001;
+  top: -20px;
+  border-color: transparent transparent rgba(0, 0, 0, 0.15) transparent;
+}
+.heartdropdown:active .heart-dropdown-menu,.heartdropdown:focus .heart-dropdown-menu {
+  display: block;
+  cursor: default;
+}
+.cartdropdown:active .heart-dropdown-menu::before,.heartdropdown:focus .heart-dropdown-menu::before{
+  display: block;
+  cursor: default;
+}
+.iconbtn:focus {
+  box-shadow: none;
+}
+.footer {
+  background-color: rgb(223, 238, 245);
+}

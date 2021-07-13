@@ -5,15 +5,57 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    children: [
+      {
+        path: '',
+        component: () => import('../views/Front/Homepage.vue')
+      },
+      {
+        path: 'ProductsList/:id',
+        component: () => import('../views/Front/ProductsList.vue')
+      },
+      {
+        path: 'ProductPage/:id',
+        component: () => import('../views/Front/ProductPage.vue')
+      },
+      {
+        path: 'OrderCheckout',
+        component: () => import('../views/Front/OrderCheckout.vue')
+      },
+      {
+        path: 'OrderCheckIn/:id',
+        component: () => import('../views/Front/OrderCheckIn.vue')
+      }
+    ]
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/Login',
+    name: 'Login',
+    component: () =>
+      import('../views/Login.vue')
+  },
+  {
+    path: '/admin',
+    component: () =>
+      import('../views/Backstage/Manager.vue'),
+    children: [
+      {
+        path: '',
+        component: () =>
+          import('../views/Backstage/BackProductList.vue')
+      },
+      {
+        path: 'BackOrderList',
+        component: () =>
+          import('../views/Backstage/BackOrderList.vue')
+      },
+      {
+        path: 'BackCoupons',
+        component: () =>
+          import('../views/Backstage/BackCoupons.vue')
+      }
+    ]
   }
 ]
 

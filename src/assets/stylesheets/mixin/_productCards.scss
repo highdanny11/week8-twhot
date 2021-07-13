@@ -1,0 +1,51 @@
+// 處理全部卡片相關樣式
+@mixin scaleCardWrap {
+  overflow: hidden;
+}
+@mixin scaleCard($h) {
+  object-fit: fill;
+  // background-image: url(/image/product33.jpg);
+  background-size: cover;
+  background-position: center;
+  height: $h;
+}
+//處理卡片hover的效果
+.productCardWrap {
+  @include scaleCardWrap;
+}
+.productCard {
+  @include scaleCard(250px);
+  transition: all 0.8s;
+}
+.productCardWrap:hover .productCard {
+  transform: scale(1.2);
+}
+//卡片上圖案定位
+@mixin saleImg($t, $s) {
+  // 輸入值用百分比，RWD才不容易跑版
+  z-index: 3;
+  top: $t;
+  left: $s;
+  object-fit: fill;
+  position: absolute;
+}
+.productCardSale {
+  @include saleImg(-3%, -4%);
+}
+@media (max-width: 568px) {
+  .productCardSale {
+    width: 75px;
+    height: 75px;
+  }
+}
+.heartlocal { // 圖片上的愛心
+  position: absolute;
+  top:2%;
+  right:2%;
+  z-index: 3;
+  color: #000;
+  opacity: 0.7;
+}
+.rwd-card-title { // 卡片商品名會因為字數不一樣推擠高度，因此這邊寫死高度
+  height: 76px;
+}
