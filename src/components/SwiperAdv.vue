@@ -136,7 +136,7 @@ export default {
   }
 }
 </script>
-<style  lang="scss" >
+<style  lang="scss">
 .swiper-container {
   width: 100%;
   height: 100%;
@@ -158,6 +158,7 @@ export default {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+  position: relative;
 }
 .swiper-slide a {
   display: block;
@@ -175,6 +176,8 @@ export default {
   color: #343a40;
   border-radius: 50%;
   transition: all 0.5s;
+  position: absolute;
+  top: 50%;
 }
 .swiper-button-next:hover, .swiper-button-prev:hover {
   background-color:#fff;
