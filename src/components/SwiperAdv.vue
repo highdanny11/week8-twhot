@@ -169,31 +169,6 @@ export default {
 .swiper-pagination {
   opacity: 0 ;
 }
-.swiper-wrapper {
-  position: relative;
-}
-.swiper-button-next, .swiper-button-prev {
-  width: 50px;
-  height: 50px;
-  background-color: rgba(0,0,0,.2);
-  color: #343a40;
-  border-radius: 50%;
-  transition: all 0.5s;
-  position: absolute;
-  top: 50%;
-}
-.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
-  right: 10px;
-  left: auto;
-}
-.swiper-button-prev, .swiper-container-rtl .swiper-button-next{
-  left: 10px;
-  right: auto;
-}
-.swiper-button-next:hover, .swiper-button-prev:hover {
-  background-color:#fff;
-  opacity: .8;
-}
 .swiper-button-next:after, .swiper-button-prev:after {
   font-size: 20px;
 }
