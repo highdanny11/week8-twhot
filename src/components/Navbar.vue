@@ -69,12 +69,13 @@
               </a>
               <a href="#" :class="{disabled:Favoriteshow === null}" class="btn btn-lg iconbtn position-relative heartdropdown" @click.prevent="showMyfavorite()">
                 <i class="fas fa-heart fs-4"></i>
+                <span class="bg-danger count">{{Favoriteshow.length}}</span>
                 <div class="heart-dropdown-menu">
                   <div class="d-flex justify-content-between align-items-center">
                     <p class="h6">我喜愛的商品</p>
                     <button type="button" class="btn  btn-white"><i class="bi bi-x"></i></button>
                   </div>
-                  <div class="d-flex justify-content-center " v-if="this.myFavorite.length === 0">
+                  <div class="d-flex justify-content-center " v-if="this.Favoriteshow.length === 0">
                     <div class="h3">目前沒有追蹤的商品</div>
                   </div>
                   <table class="table">
