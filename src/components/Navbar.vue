@@ -132,11 +132,11 @@ export default {
           this.myFavorite.forEach(favorite => {
             if (item.id === favorite) {
               this.Favoriteshow.push(item)
-              this.favoritecount = this.Favoriteshow.length
             }
           })
         })
       }
+      this.favoritecount = this.Favoriteshow.length
     },
     goProductpage (id) {
       this.$router.push(`/ProductPage/${id}`)
