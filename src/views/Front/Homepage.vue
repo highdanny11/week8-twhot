@@ -1,6 +1,6 @@
 <template>
-<ScrollTop></ScrollTop>
   <div class="container mb-4 ">
+    <ScrollTop></ScrollTop>
     <SwiperBar></SwiperBar>
     <SelectCategoryCard></SelectCategoryCard>
   </div>
@@ -9,13 +9,13 @@
       <div class="row justify-content-center">
         <div class="col-lg-5 p-3 my-lg-5 d-flex flex-row-reverse">
           <div
-            data-aos="fade-up-right"
+            data-aos="fade-up"
             class="bg-img-main w-100"
             style="background-image: url('https://images.unsplash.com/photo-1565895405139-e188df996e0b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1033&q=80')"
           ></div>
         </div>
         <div
-          data-aos="fade-left"
+          data-aos="flip-left"
           class="
             col-lg-5
             p-3
@@ -43,7 +43,7 @@
       <div class="row justify-content-center flex-row-reverse">
         <div class="col-lg-5 p-3 d-flex">
           <div
-            data-aos="fade-up-left"
+            data-aos="fade-up"
             class="bg-img-main w-100"
             :style="{
               'background-image': `url(${require(`@/assets/images/garden.jpg`)})`,
@@ -51,7 +51,7 @@
           ></div>
         </div>
         <div
-          data-aos="fade-right"
+          data-aos="flip-left"
           class="
             col-lg-5
             p-3

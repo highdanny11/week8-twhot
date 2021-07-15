@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="row">
+    <div class="row mb-4">
       <swiper
         :autoplay="{
           delay: 5000,
